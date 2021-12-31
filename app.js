@@ -53,12 +53,11 @@ const displaySearchResult = async books => {
     books.forEach(book => {
         const div = document.createElement('div');
         div.classList.add('col')
-        div.innerHTML = `
-         <div class="card h-100">
+        div.innerHTML = `<div class="card h-100">    
          <img src= 'https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg' class="card-img-top" alt="...">
     <div class="card-body">
         <h2 class="card-title">Book Name:${book.title}</h2>
-        <h4> Athor Name: ${book.author_name}</h4>
+        <h4> Author Name: ${book.author_name}</h4>
          <p> Publisher Name: ${book.publisher.slice(10)}</p>
          <h5>First Publish year: ${book.first_publish_year}</h5>
     </div>
