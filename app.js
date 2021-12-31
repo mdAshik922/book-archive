@@ -26,7 +26,7 @@ const searchBook = async () => {
     const res = await fetch(url);
     const data = await res.json();
     displaySearchResult(data.docs);
-    // console.log(data);
+   
 
     // error handling
     if (data.massage === "Not Found") {
@@ -59,7 +59,7 @@ const displaySearchResult = async books => {
     <div class="card-body">
         <h2 class="card-title">Book Name:${book.title}</h2>
         <h4> Athor Name: ${book.author_name}</h4>
-         <p> Publisher Name: ${book.publisher}</p>
+         <p> Publisher Name: ${book.publisher.slice(10)}</p>
          <h5>First Publish year: ${book.first_publish_year}</h5>
     </div>
     </div>`
