@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Book</title>
+    <style>
+        #spinner {
+            display: none;
+        }
+
+        body {
+            background-color: rgb(112, 109, 109);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- input fisld -->
+        <h1 class="text-center text-success">Find Your Favorite BOOKs !!</h1>
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="search-field" type="text" class="form-control " placeholder="Type  book name"
+                aria-label="Search the book" aria-describedby="button-search">
+            <button onclick="searchBook()" class="btn btn-outline-secondary text-white" type="button"
+                id="button-search">search</button>
+        </div>
+
+        <!-- Error Massage -->
+        <div id="error" class="text-center fs-2 text-danger"></div>
+
+        <!-- Loading -->
+        <div id="spinner" class="text-center text-primary fs-1">Loading...</div>
+
+        <!-- total books -->
+        <div id="total-found" class="p-4">
+
+        </div>
+        <div id="books"></div>
+
+        <!-- Search Result -->
+        <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+
+        </div>
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
